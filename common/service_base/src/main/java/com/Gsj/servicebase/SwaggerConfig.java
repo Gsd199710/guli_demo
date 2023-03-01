@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
-@EnableSwagger2//swagger注解
+@EnableSwagger2//swagger注解,引入swagger2Api测试
 public class SwaggerConfig {
     @Bean
     public Docket webApiConfig(){

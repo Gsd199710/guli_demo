@@ -25,11 +25,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--引入common_utils模块下的统一处理结果的配置组件 -->
-        <dependency>
-            <groupId>com.Gsj</groupId>
-            <artifactId>common_utils</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+                <!--由于service_base包下引入了该依赖，故不需要额外引入-->
+<!--            <groupId>com.Gsj</groupId>-->
+<!--            <artifactId>common_utils</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
