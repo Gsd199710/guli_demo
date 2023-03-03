@@ -32,6 +32,7 @@ import java.util.List;
 //设置swaggerApi属性的注解
 @RestController
 @RequestMapping("/eduservice/edu-teacher")
+@CrossOrigin//解决跨域问题
 public class EduTeacherController {
     @Autowired
     private EduTeacherService eduTeacherService;
