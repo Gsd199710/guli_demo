@@ -93,6 +93,8 @@ public class EduTeacherController {
         if (!StringUtils.isEmpty(end)) {
             wrapper.le("gmt_modified",end);
         }
+        //添加按时间降序排序功能
+        wrapper.orderByDesc("gmt_create");
         eduTeacherService.page(page,wrapper);
         long total = page.getTotal();
         List<EduTeacher> records = page.getRecords();
@@ -112,11 +114,11 @@ public class EduTeacherController {
     @GetMapping("getTeacher/{id}")
     @ApiOperation(value = "根据讲师id查询")
     public Results getTeacher(@PathVariable("id") String id){
-        try {
-            int i = 10 / 0;//测试统一处理异常组件
-        }catch (Exception e){
-            throw new GuliException(1001,"执行了GuliException异常处理");
-        }
+//        try {
+//            int i = 10 / 0;//测试统一处理异常组件
+//        }catch (Exception e){
+//            throw new GuliException(1001,"执行了GuliException异常处理");
+//        }
         EduTeacher teacher = eduTeacherService.getById(id);
         return Results.success().data("teacher",teacher);
     }
