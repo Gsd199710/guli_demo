@@ -12,7 +12,14 @@
 
     <name>service_edu</name>
 
-
+    <dependencies>
+        <dependency>
+            <!--需要引入对应版本的poi依赖-->
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.0.5</version>
+        </dependency>
+    </dependencies>
 
 
 
