@@ -53,7 +53,6 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         onewrapper.eq("parent_id","0");
         //baseMapper是ServiceImpl自动注入的
         List<EduSubject> oneSubjectList = baseMapper.selectList(onewrapper);
-
         QueryWrapper<EduSubject> twowrapper = new QueryWrapper<>();
         twowrapper.ne("parent_id","0");
         //baseMapper是ServiceImpl自动注入的
@@ -73,7 +72,7 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
                     return twoSubject;
                 }
                 return null;
-            }).collect(Collectors.toList());
+            }).filter(twoSubject -> twoSubject !=null).collect(Collectors.toList());
             //将二级分类加入到一级分类目录下
             if (twoFinalList.size() != 0){
                 oneSubject.setChildren(twoFinalList);
